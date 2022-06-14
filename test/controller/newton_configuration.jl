@@ -171,7 +171,7 @@ end
 
 	@test norm(core.Δq[1] .- 0.1, Inf) < 1.0e-8
 	@test norm(core.Δu[1] .- 0.1, Inf) < 1.0e-8
-]
+
 	@test (norm(core.res.q2[1] .- core.obj.q[1] * core.Δq[1]
 		- im_traj0.δq0[1+2][1:nq, :]' * core.ν[1+2] - im_traj0.δq1[1+1][1:nq, :]' * core.ν[1+1]
 		.+ core.ν[1][1], Inf) < 1.0e-8)
